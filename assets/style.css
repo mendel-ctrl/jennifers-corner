@@ -93,8 +93,8 @@ a { color: inherit; }
 .topbar { background: var(--teal); color: var(--on-teal); border-bottom: 1px solid rgba(255,255,255,.08); position: sticky; top: 0; z-index: 20; }
 .topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; }
 .brand { font-family: var(--serif); font-weight: 600; font-size: 1.1rem; letter-spacing: .01em; line-height: 1.2; display: inline-flex; align-items: center; gap: 10px; }
-.brand__mark { height: 34px; width: auto; flex: none; }
-@media (max-width: 380px) { .brand { font-size: 1rem; } .brand__mark { height: 28px; } }
+.brand__mark { height: 40px; width: auto; flex: none; border-radius: 6px; }
+@media (max-width: 380px) { .brand { font-size: 1rem; } .brand__mark { height: 34px; } }
 
 /* ---------- Hero ---------- */
 .hero { background: var(--teal); color: var(--on-teal); padding: 48px 0 64px; overflow: hidden; }
