@@ -1,0 +1,13 @@
+# PRIVATE: CMS Cloud exports contain donor data. Never upload them.
+exports/
+*.csv
+*.xlsx
+*.xls
+
+# Original full-size photos (the compressed web copies live in images/)
+photos/
+
+# Computer clutter
+.DS_Store
+Thumbs.db
+__pycache__/

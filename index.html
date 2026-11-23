@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jennifer's Hospitality Corner · Chabad of St. Petersburg</title>
+  <meta name="description" content="Help dedicate Jennifer's Hospitality Corner at the new Chabad Center of St. Petersburg, FL, in honor of Jennifer Hunter. Goal: $25,000.">
+  <meta name="theme-color" content="#113A40">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jennifer's Hospitality Corner">
+  <meta property="og:description" content="Help dedicate a welcoming corner at the new Chabad Center of St. Petersburg in honor of Jennifer Hunter.">
+  <meta property="og:image" content="https://mendel-ctrl.github.io/jennifers-corner/images/share.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23113A40'/%3E%3Cpath d='M16 22h26v18a10 10 0 0 1-10 10h-6a10 10 0 0 1-10-10z' fill='%23E6A03A'/%3E%3Cpath d='M42 26h3a6 6 0 0 1 0 12h-3' fill='none' stroke='%23E6A03A' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <span class="brand">Chabad of St. Petersburg</span>
+      <a class="btn btn--small js-donate" href="https://www.chabadsp.com/donate" target="_blank" rel="noopener">Donate</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow">In honor of Jennifer Hunter</p>
+          <h1>Jennifer's Hospitality Corner</h1>
+          <p class="lede">Help us dedicate a warm, welcoming corner of the new Chabad Center of St.&nbsp;Petersburg in Jennifer's name, so every guest who walks in feels the way she made us feel.</p>
+
+          <div class="tally" aria-live="polite">
+            <div class="tally__top">
+              <div>
+                <p class="raised"><span class="raised__num" id="raised">$0</span></p>
+                <p class="raised__goal">raised of <span id="goal">$25,000</span> goal</p>
+              </div>
+              <svg class="mug" id="mug" viewBox="0 0 120 120" role="img" aria-labelledby="mugTitle">
+                <title id="mugTitle">A coffee mug filled 0% with honey</title>
+                <defs>
+                  <clipPath id="mugInside"><path d="M22 40h56v40a20 20 0 0 1-20 20H42a20 20 0 0 1-20-20z"/></clipPath>
+                </defs>
+                <g class="steam" fill="none" stroke-linecap="round" stroke-width="3.5">
+                  <path class="steam__1" d="M38 32c-5-6 5-10 0-17"/>
+                  <path class="steam__2" d="M50 32c-5-6 5-10 0-17"/>
+                  <path class="steam__3" d="M62 32c-5-6 5-10 0-17"/>
+                </g>
+                <path class="mug__body" d="M22 40h56v40a20 20 0 0 1-20 20H42a20 20 0 0 1-20-20z"/>
+                <rect class="mug__fill" id="mugFill" clip-path="url(#mugInside)" x="18" y="100" width="64" height="0"/>
+                <path class="mug__handle" d="M78 50h6a13 13 0 0 1 0 26h-6" fill="none" stroke-width="7"/>
+                <path class="mug__rim" d="M22 40h56v40a20 20 0 0 1-20 20H42a20 20 0 0 1-20-20z" fill="none" stroke-width="5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="bar" role="progressbar" aria-label="Progress toward goal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar">
+              <div class="bar__fill" id="barFill"></div>
+            </div>
+
+            <dl class="stats">
+              <div><dt>Donors</dt><dd id="statDonors">0</dd></div>
+              <div><dt>Of goal</dt><dd id="statPct">0%</dd></div>
+              <div><dt id="statLeftLabel">Left to go</dt><dd id="statLeft">$25,000</dd></div>
+            </dl>
+          </div>
+
+          <a class="btn btn--big js-donate" href="https://www.chabadsp.com/donate" target="_blank" rel="noopener">Donate now</a>
+          <p class="note">On the donation page, write <strong>“Jennifer's Hospitality Corner”</strong> in the note so your gift counts here.</p>
+        </div>
+
+        <figure class="hero__photo" id="heroPhoto" hidden></figure>
+      </div>
+    </section>
+
+    <!-- 2. WHY -->
+    <section class="section section--white" id="why">
+      <div class="wrap narrow">
+        <h2>Why a hospitality corner</h2>
+        <p>Jen had a gift for making everyone feel comfortable and welcome. At every Shabbat dinner, every holiday and every event at Chabad, her warmth was there to greet you, and whether you were walking in for the first time or the hundredth, she made you feel at home.</p>
+        <p>As we open the new Chabad Center of St.&nbsp;Petersburg, we want that spirit built right into its walls. Jennifer's Hospitality Corner will be a dedicated space to greet guests, share a warm drink and start a conversation, so the welcome Jen gave so freely keeps going for years to come.</p>
+      </div>
+      <div class="wrap">
+        <ul class="gallery" id="gallery"></ul>
+      </div>
+    </section>
+
+    <!-- 3. HOW TO GIVE -->
+    <section class="section section--sage" id="how">
+      <div class="wrap">
+        <h2>How to give</h2>
+        <ol class="steps">
+          <li><span class="steps__num" aria-hidden="true">1</span><div><h3>Open the donation page</h3><p><a class="js-donate" href="https://www.chabadsp.com/donate" target="_blank" rel="noopener">chabadsp.com/donate</a> opens in a new tab.</p></div></li>
+          <li><span class="steps__num" aria-hidden="true">2</span><div><h3>Choose any amount</h3><p>Every gift, large or small, helps build the corner.</p></div></li>
+          <li><span class="steps__num" aria-hidden="true">3</span><div><h3>Add a note</h3><p>Write <strong>“Jennifer's Hospitality Corner”</strong> or <strong>“Jennifer Hunter”</strong> in the note.</p></div></li>
+          <li><span class="steps__num" aria-hidden="true">4</span><div><h3>See your gift here</h3><p>Your gift appears on this page once it's recorded.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. DONORS -->
+    <section class="section section--white" id="donors">
+      <div class="wrap">
+        <div class="donors__head">
+          <h2>Donors <span class="count" id="donorCount"></span></h2>
+          <div class="controls">
+            <label class="search">
+              <span class="visually-hidden">Search donors</span>
+              <input type="search" id="search" placeholder="Search names" autocomplete="off">
+            </label>
+            <div class="toggle" role="group" aria-label="Sort donors">
+              <button type="button" class="toggle__btn" data-sort="latest" aria-pressed="true">Latest</button>
+              <button type="button" class="toggle__btn" data-sort="largest" aria-pressed="false">Largest</button>
+            </div>
+          </div>
+        </div>
+        <ul class="donors" id="donorList"></ul>
+        <p class="empty" id="empty" hidden></p>
+        <div class="center"><button type="button" class="btn btn--ghost" id="showAll" hidden>Show all</button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span class="brand">Chabad of St. Petersburg</span>
+      <span>Updated <time id="updated">-</time></span>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+    <button type="button" class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+    <img id="lightboxImg" alt="">
+    <button type="button" class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="Next photo">›</button>
+    <p class="lightbox__cap" id="lightboxCap"></p>
+  </dialog>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
