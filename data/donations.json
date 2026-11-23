@@ -4,13 +4,6 @@
   "updatedAt": "2026-11-23",
   "donations": [
     {
-      "id": "t_a0027863dd7419e5",
-      "name": "Debotah Vanlandingham",
-      "amount": 136.0,
-      "date": "2026-11-16",
-      "anonymous": false
-    },
-    {
       "id": "t_249298388b45526f",
       "name": "Jennie Rose Fishman",
       "amount": 18.0,
@@ -80,5 +73,9 @@
       "date": "2026-11-23",
       "anonymous": false
     }
+  ],
+  "excluded": [
+    "t_a0027863dd7419e5",
+    "t_087cf646d8b31efe"
   ]
 }

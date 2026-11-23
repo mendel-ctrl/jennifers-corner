@@ -380,7 +380,8 @@ def main():
     # 3. Pick out matching gifts
     data = json.loads(DATA_FILE.read_text()) if DATA_FILE.exists() else {
         "goal": 25000, "donateUrl": "https://www.chabadsp.com/donate", "updatedAt": "", "donations": []}
-    existing = {d["id"] for d in data.get("donations", [])}
+    # gifts already on the page, plus gifts you chose not to count ("excluded")
+    existing = {d["id"] for d in data.get("donations", [])} | set(data.get("excluded", []))
 
     def full_name(r):
         if found.get("name"):
