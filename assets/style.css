@@ -104,6 +104,7 @@ a { color: inherit; }
   .hero__grid { grid-template-columns: 1.1fr .9fr; gap: 56px; }
 }
 .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .8rem; font-weight: 700; color: var(--honey); margin-bottom: .75em; }
+.hebrew-name { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--on-teal); margin: -.4em 0 .6em; }
 .hero h1 { font-size: clamp(2.3rem, 6.5vw, 3.8rem); font-weight: 700; color: #fff; }
 .lede { font-size: 1.15rem; color: var(--on-teal-muted); max-width: 36em; }
 
@@ -154,6 +155,13 @@ a { color: inherit; }
 .section--white { background: var(--bg-page); }
 .section--sage { background: var(--bg-sage); }
 .section .narrow p { font-size: 1.12rem; }
+
+/* Mom's message */
+.letter { margin: 36px 0 0; background: var(--bg-sage); border-left: 5px solid var(--honey); border-radius: 0 var(--radius) var(--radius) 0; padding: 26px 26px 20px; }
+.letter__label { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 12px; }
+.letter blockquote { margin: 0; font-family: var(--serif); font-size: 1.12rem; line-height: 1.6; }
+.letter blockquote p { font-size: inherit !important; }
+.letter__close { font-style: italic; font-weight: 600; margin-bottom: 0; }
 
 /* Gallery */
 .gallery { list-style: none; padding: 0; margin: 36px 0 0; display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
@@ -217,9 +225,9 @@ a { color: inherit; }
 /* Footer */
 .footer { background: var(--teal); color: var(--on-teal-muted); padding: 28px 0; font-size: .95rem; }
 .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; }
-.footer__brand { display: flex; flex-direction: column; gap: 10px; }
-.footer__logo { width: 170px; height: auto; }
+.footer__brand { display: flex; flex-direction: column; gap: 6px; }
 .footer .brand { color: var(--on-teal); }
+.footer__memorial { font-size: .9rem; font-style: italic; }
 
 /* Lightbox (big photo viewer) */
 .lightbox {

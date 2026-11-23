@@ -43,7 +43,7 @@ COLUMN_MEMORY = ROOT / "column-map.json"   # remembers your column choices (head
 
 # Phrases that mark a gift for this campaign. Capitals, punctuation and spaces are ignored,
 # so "El-Etta", "Eletta", "JENNIFER'S  hospitality" etc. all match.
-PHRASES = ["Jennifer Hunter", "Jenn Hunter", "Jennifer's Hospitality", "Hospitality Corner", "El Etta"]
+PHRASES = ["Jennifer Hunter", "Jenn Hunter", "Jennifer's Hospitality", "Hospitality Corner", "El Etta", "Yael Etta"]
 
 
 def squash(text):
