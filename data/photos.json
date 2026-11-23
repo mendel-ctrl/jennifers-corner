@@ -8,12 +8,44 @@
   },
   "gallery": [
     {
+      "file": "09-ballpark-friends.jpg",
+      "src": "images/09-ballpark-friends.jpg",
+      "thumb": "images/09-ballpark-friends-thumb.jpg",
+      "width": 1220,
+      "height": 1600,
+      "alt": "Jen smiling with three friends in front of a framed baseball photo"
+    },
+    {
       "file": "1-evening-portrait.jpg",
       "src": "images/1-evening-portrait.jpg",
       "thumb": "images/1-evening-portrait-thumb.jpg",
       "width": 1466,
       "height": 1600,
       "alt": "Jen smiling warmly at an evening celebration, wearing a sparkly navy dress"
+    },
+    {
+      "file": "10-ice-cream-night.jpg",
+      "src": "images/10-ice-cream-night.jpg",
+      "thumb": "images/10-ice-cream-night-thumb.jpg",
+      "width": 1200,
+      "height": 1600,
+      "alt": "Jen in a pink knit hat holding up an ice cream cup in a big group selfie under a pink neon sign"
+    },
+    {
+      "file": "11-candy-store.jpg",
+      "src": "images/11-candy-store.jpg",
+      "thumb": "images/11-candy-store-thumb.jpg",
+      "width": 1500,
+      "height": 1125,
+      "alt": "Jen in a pink knit hat smiling with a group of friends in a colorful candy store"
+    },
+    {
+      "file": "12-doorway.jpg",
+      "src": "images/12-doorway.jpg",
+      "thumb": "images/12-doorway-thumb.jpg",
+      "width": 1200,
+      "height": 1600,
+      "alt": "Jen grinning and pointing into a freshly furnished bedroom"
     },
     {
       "file": "2-with-friend-evening.jpg",
