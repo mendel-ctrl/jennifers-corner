@@ -46,6 +46,30 @@
       "width": 1600,
       "height": 1335,
       "alt": "Jen in a menorah sweater with a friend at an outdoor Chanukah celebration"
+    },
+    {
+      "file": "6-dinner-table.jpg",
+      "src": "images/6-dinner-table.jpg",
+      "thumb": "images/6-dinner-table-thumb.jpg",
+      "width": 1600,
+      "height": 1122,
+      "alt": "Jen smiling with two friends at a festive dinner table"
+    },
+    {
+      "file": "7-with-friends.jpg",
+      "src": "images/7-with-friends.jpg",
+      "thumb": "images/7-with-friends-thumb.jpg",
+      "width": 1600,
+      "height": 1416,
+      "alt": "Jen with two friends, all smiling, at a community gathering"
+    },
+    {
+      "file": "8-group-dinner.jpg",
+      "src": "images/8-group-dinner.jpg",
+      "thumb": "images/8-group-dinner-thumb.jpg",
+      "width": 1200,
+      "height": 1600,
+      "alt": "Jen in a cozy knit hat, smiling with a big group of friends around a dinner table"
     }
   ]
 }
