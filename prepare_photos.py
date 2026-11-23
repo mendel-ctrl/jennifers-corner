@@ -82,7 +82,10 @@ def main():
 
         w, h = save_jpeg(img, OUT / f"{s}.jpg", 1600, 80)
         cover(img, 600, 600).save(OUT / f"{s}-thumb.jpg", "JPEG", quality=76, optimize=True, progressive=True)
+        mw, mh = save_jpeg(img.copy().resize((min(720, img.width), round(img.height * min(720, img.width) / img.width))),
+                           OUT / f"{s}-md.jpg", 1100, 78)  # gallery size, natural shape
         entry = {"file": f.name, "src": f"images/{s}.jpg", "thumb": f"images/{s}-thumb.jpg",
+                 "medium": f"images/{s}-md.jpg", "mw": mw, "mh": mh,
                  "width": w, "height": h, "alt": old_alt.get(f.name, "")}
         gallery.append(entry)
 
@@ -92,6 +95,9 @@ def main():
             hero = {"file": f.name, "src": "images/hero.jpg", "width": 900, "height": 1125,
                     "alt": (old.get("hero") or {}).get("alt") or old_alt.get(f.name, "")}
 
+    # keep the gallery order you chose before; new photos go at the end
+    old_order = [g.get("file") for g in old.get("gallery", [])]
+    gallery.sort(key=lambda g: old_order.index(g["file"]) if g["file"] in old_order else len(old_order))
     DATA.write_text(json.dumps({"hero": hero, "gallery": gallery}, indent=2, ensure_ascii=False) + "\n")
 
     total_in = sum(f.stat().st_size for f in files) / 1e6

@@ -8,49 +8,45 @@
   },
   "gallery": [
     {
-      "file": "09-ballpark-friends.jpg",
-      "src": "images/09-ballpark-friends.jpg",
-      "thumb": "images/09-ballpark-friends-thumb.jpg",
-      "width": 1220,
-      "height": 1600,
-      "alt": "Jen smiling with three friends in front of a framed baseball photo"
-    },
-    {
       "file": "1-evening-portrait.jpg",
       "src": "images/1-evening-portrait.jpg",
       "thumb": "images/1-evening-portrait-thumb.jpg",
+      "medium": "images/1-evening-portrait-md.jpg",
+      "mw": 720,
+      "mh": 786,
       "width": 1466,
       "height": 1600,
       "alt": "Jen smiling warmly at an evening celebration, wearing a sparkly navy dress"
     },
     {
-      "file": "10-ice-cream-night.jpg",
-      "src": "images/10-ice-cream-night.jpg",
-      "thumb": "images/10-ice-cream-night-thumb.jpg",
-      "width": 1200,
-      "height": 1600,
-      "alt": "Jen in a pink knit hat holding up an ice cream cup in a big group selfie under a pink neon sign"
+      "file": "5-chanukah.jpg",
+      "src": "images/5-chanukah.jpg",
+      "thumb": "images/5-chanukah-thumb.jpg",
+      "medium": "images/5-chanukah-md.jpg",
+      "mw": 720,
+      "mh": 601,
+      "width": 1600,
+      "height": 1335,
+      "alt": "Jen in a menorah sweater with a friend at an outdoor Chanukah celebration"
     },
     {
-      "file": "11-candy-store.jpg",
-      "src": "images/11-candy-store.jpg",
-      "thumb": "images/11-candy-store-thumb.jpg",
-      "width": 1500,
-      "height": 1125,
-      "alt": "Jen in a pink knit hat smiling with a group of friends in a colorful candy store"
-    },
-    {
-      "file": "12-doorway.jpg",
-      "src": "images/12-doorway.jpg",
-      "thumb": "images/12-doorway-thumb.jpg",
-      "width": 1200,
-      "height": 1600,
-      "alt": "Jen grinning and pointing into a freshly furnished bedroom"
+      "file": "4-candles.jpg",
+      "src": "images/4-candles.jpg",
+      "thumb": "images/4-candles-thumb.jpg",
+      "medium": "images/4-candles-md.jpg",
+      "mw": 720,
+      "mh": 509,
+      "width": 1600,
+      "height": 1132,
+      "alt": "Jen and a friend laughing together as they light rows of tea-light candles"
     },
     {
       "file": "2-with-friend-evening.jpg",
       "src": "images/2-with-friend-evening.jpg",
       "thumb": "images/2-with-friend-evening-thumb.jpg",
+      "medium": "images/2-with-friend-evening-md.jpg",
+      "mw": 720,
+      "mh": 900,
       "width": 1280,
       "height": 1600,
       "alt": "Jen and a friend smiling side by side at an evening event"
@@ -59,49 +55,89 @@
       "file": "3-purim.jpg",
       "src": "images/3-purim.jpg",
       "thumb": "images/3-purim-thumb.jpg",
+      "medium": "images/3-purim-md.jpg",
+      "mw": 720,
+      "mh": 925,
       "width": 1246,
       "height": 1600,
       "alt": "Jen dressed as a pirate at a Purim party, happily holding up a hamantash"
     },
     {
-      "file": "4-candles.jpg",
-      "src": "images/4-candles.jpg",
-      "thumb": "images/4-candles-thumb.jpg",
-      "width": 1600,
-      "height": 1132,
-      "alt": "Jen and a friend laughing together as they light rows of tea-light candles"
-    },
-    {
-      "file": "5-chanukah.jpg",
-      "src": "images/5-chanukah.jpg",
-      "thumb": "images/5-chanukah-thumb.jpg",
-      "width": 1600,
-      "height": 1335,
-      "alt": "Jen in a menorah sweater with a friend at an outdoor Chanukah celebration"
-    },
-    {
-      "file": "6-dinner-table.jpg",
-      "src": "images/6-dinner-table.jpg",
-      "thumb": "images/6-dinner-table-thumb.jpg",
-      "width": 1600,
-      "height": 1122,
-      "alt": "Jen smiling with two friends at a festive dinner table"
-    },
-    {
       "file": "7-with-friends.jpg",
       "src": "images/7-with-friends.jpg",
       "thumb": "images/7-with-friends-thumb.jpg",
+      "medium": "images/7-with-friends-md.jpg",
+      "mw": 720,
+      "mh": 637,
       "width": 1600,
       "height": 1416,
       "alt": "Jen with two friends, all smiling, at a community gathering"
     },
     {
+      "file": "12-doorway.jpg",
+      "src": "images/12-doorway.jpg",
+      "thumb": "images/12-doorway-thumb.jpg",
+      "medium": "images/12-doorway-md.jpg",
+      "mw": 720,
+      "mh": 960,
+      "width": 1200,
+      "height": 1600,
+      "alt": "Jen grinning and pointing into a freshly furnished bedroom"
+    },
+    {
+      "file": "6-dinner-table.jpg",
+      "src": "images/6-dinner-table.jpg",
+      "thumb": "images/6-dinner-table-thumb.jpg",
+      "medium": "images/6-dinner-table-md.jpg",
+      "mw": 720,
+      "mh": 505,
+      "width": 1600,
+      "height": 1122,
+      "alt": "Jen smiling with two friends at a festive dinner table"
+    },
+    {
       "file": "8-group-dinner.jpg",
       "src": "images/8-group-dinner.jpg",
       "thumb": "images/8-group-dinner-thumb.jpg",
+      "medium": "images/8-group-dinner-md.jpg",
+      "mw": 720,
+      "mh": 960,
       "width": 1200,
       "height": 1600,
       "alt": "Jen in a cozy knit hat, smiling with a big group of friends around a dinner table"
+    },
+    {
+      "file": "09-ballpark-friends.jpg",
+      "src": "images/09-ballpark-friends.jpg",
+      "thumb": "images/09-ballpark-friends-thumb.jpg",
+      "medium": "images/09-ballpark-friends-md.jpg",
+      "mw": 720,
+      "mh": 944,
+      "width": 1220,
+      "height": 1600,
+      "alt": "Jen smiling with three friends in front of a framed baseball photo"
+    },
+    {
+      "file": "11-candy-store.jpg",
+      "src": "images/11-candy-store.jpg",
+      "thumb": "images/11-candy-store-thumb.jpg",
+      "medium": "images/11-candy-store-md.jpg",
+      "mw": 720,
+      "mh": 540,
+      "width": 1500,
+      "height": 1125,
+      "alt": "Jen in a pink knit hat smiling with a group of friends in a colorful candy store"
+    },
+    {
+      "file": "10-ice-cream-night.jpg",
+      "src": "images/10-ice-cream-night.jpg",
+      "thumb": "images/10-ice-cream-night-thumb.jpg",
+      "medium": "images/10-ice-cream-night-md.jpg",
+      "mw": 720,
+      "mh": 960,
+      "width": 1200,
+      "height": 1600,
+      "alt": "Jen in a pink knit hat holding up an ice cream cup in a big group selfie under a pink neon sign"
     }
   ]
 }

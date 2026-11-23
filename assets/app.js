@@ -177,12 +177,15 @@
       btn.type = "button";
       btn.setAttribute("aria-label", "Open larger: " + (p.alt || "photo " + (i + 1)));
       var img = document.createElement("img");
-      img.src = p.thumb || p.src;
+      img.src = p.medium || p.thumb || p.src;
       img.alt = p.alt || "";
       img.loading = "lazy";
       img.decoding = "async";
-      img.width = 400; img.height = 400;
-      btn.appendChild(img);
+      img.width = p.mw || 400; img.height = p.mh || 400;
+      var frame = document.createElement("span");
+      frame.className = "frame";
+      frame.appendChild(img);
+      btn.appendChild(frame);
       btn.addEventListener("click", function () { openLightbox(i, btn); });
       li.appendChild(btn);
       ul.appendChild(li);
