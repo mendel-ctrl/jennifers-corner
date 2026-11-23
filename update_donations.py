@@ -43,7 +43,7 @@ COLUMN_MEMORY = ROOT / "column-map.json"   # remembers your column choices (head
 
 # Phrases that mark a gift for this campaign. Capitals, punctuation and spaces are ignored,
 # so "El-Etta", "Eletta", "JENNIFER'S  hospitality" etc. all match.
-PHRASES = ["Jennifer Hunter", "Jenn Hunter", "Jennifer's Hospitality", "Hospitality Corner", "El Etta", "Yael Etta"]
+PHRASES = ["Jennifer Hunter", "Jenn Hunter", "Jennifer's Hospitality", "Hospitality Corner", "El Etta", "Yael Etta", "Jennifer VanLandingham", "Jennifer Vanlandingham Hunter"]
 
 
 def squash(text):
@@ -52,6 +52,11 @@ def squash(text):
 
 
 KEYS = [squash(p) for p in PHRASES]
+
+
+def mentions_jen(text):
+    t = squash(text)
+    return any(k in t for k in KEYS) or ("jennifer" in t and "hunter" in t)
 
 # ----------------------------------------------------------------- column detection
 # Each field: list of (header words to look for, score). Higher score = better match.
@@ -70,14 +75,14 @@ HINTS = {
            ("donationid", 9), ("chargeid", 8), ("confirmationnumber", 8), ("confirmation", 7),
            ("referencenumber", 7), ("reference", 6), ("orderid", 6), ("receiptnumber", 6), ("id", 4)],
     "note": [("note", 10), ("comment", 10), ("memo", 9), ("message", 8), ("dedication", 8),
-             ("inhonor", 7), ("inmemory", 7), ("designation", 6), ("instructions", 6), ("purpose", 5),
+             ("inhonor", 7), ("inmemory", 7), ("honor", 7), ("memory", 7), ("tribute", 7), ("designation", 6), ("instructions", 6), ("purpose", 5),
              ("description", 4), ("remark", 6)],
 }
 # Headers that contain a hint word but are NOT what we want
 AVOID = {
     "amount": ["fee", "tax", "deductible", "refund", "net", "recurring", "goal", "discount", "count"],
     "name": ["campaign", "fund", "company", "organization", "org", "event", "product", "file", "user",
-             "first", "last", "card type", "honoree", "tribute", "solicitor", "page"],
+             "first", "last", "card", "honoree", "tribute", "solicitor", "page", "memory", "honor"],
     "date": ["update", "modified", "expir", "birth", "refund", "next", "start", "end"],
     "id": ["donor", "contact", "customer", "campaign", "fund", "user", "batch", "account", "page"],
     "first_name": [], "last_name": [],
@@ -233,6 +238,8 @@ def tidy_name(name):
         last, first = [p.strip() for p in n.split(",")]
         if first and last and squash(first) not in SUFFIXES:
             n = f"{first} {last}"
+    # "Elaine SCHREIBER" -> "Elaine Schreiber" (keep short initials like "AD")
+    n = " ".join(w.capitalize() if w.isupper() and len(w) > 2 else w for w in n.split())
     if n.isupper() or n.islower():
         n = " ".join(w.capitalize() if not re.match(r"^(mc|mac)", w.lower()) else w.capitalize() for w in n.split())
     return n
@@ -367,6 +374,7 @@ def main():
         print("  WARNING: no transaction ID column, so duplicates are spotted by name + amount + date.")
 
     status_col = next((h for h in headers if squash(h) in ("status", "paymentstatus", "transactionstatus")), None)
+    charged_col = next((h for h in headers if squash(h) in ("charged", "paid", "approved")), None)
     anon_col = next((h for h in headers if "anonym" in h.lower()), None)
 
     # 3. Pick out matching gifts
@@ -384,13 +392,16 @@ def main():
     seen = set()
     for r in rows:
         note_text = " ".join(str(r.get(h, "") or "") for h in found["note"])
-        if not any(k in squash(note_text) for k in KEYS):
+        if not mentions_jen(note_text):
             continue
         amount = parse_amount(r.get(found["amount"]))
         when = parse_date(r.get(found["date"]))
         name = full_name(r)
         if status_col and any(b in str(r.get(status_col, "")).lower() for b in BAD_STATUS):
             skipped.append(f"{name or '?'} {r.get(found['amount'])}: status is '{r.get(status_col)}'")
+            continue
+        if charged_col and str(r.get(charged_col, "")).strip().lower() in ("false", "no", "0", "n"):
+            skipped.append(f"{name or '?'} {r.get(found['amount'])}: card was not charged")
             continue
         if amount is None or amount <= 0:
             skipped.append(f"{name or '?'}: amount '{r.get(found['amount'])}' isn't a positive number")

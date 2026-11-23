@@ -2,5 +2,83 @@
   "goal": 25000,
   "donateUrl": "https://www.chabadsp.com/donate",
   "updatedAt": "2026-11-23",
-  "donations": []
+  "donations": [
+    {
+      "id": "t_a0027863dd7419e5",
+      "name": "Debotah Vanlandingham",
+      "amount": 136.0,
+      "date": "2026-11-16",
+      "anonymous": false
+    },
+    {
+      "id": "t_249298388b45526f",
+      "name": "Jennie Rose Fishman",
+      "amount": 18.0,
+      "date": "2026-11-19",
+      "anonymous": false
+    },
+    {
+      "id": "t_9de8ccf0ac26aece",
+      "name": "Beth Kutcher",
+      "amount": 18.0,
+      "date": "2026-11-19",
+      "anonymous": false
+    },
+    {
+      "id": "t_b786f156b551a7b9",
+      "name": "Daniel Layish",
+      "amount": 36.0,
+      "date": "2026-11-21",
+      "anonymous": false
+    },
+    {
+      "id": "t_191347b21ec7de5d",
+      "name": "Linda Osborne",
+      "amount": 18.0,
+      "date": "2026-11-22",
+      "anonymous": false
+    },
+    {
+      "id": "t_f856bf26b857c531",
+      "name": "Robin Grynbal",
+      "amount": 18.0,
+      "date": "2026-11-22",
+      "anonymous": false
+    },
+    {
+      "id": "t_f6a906db719ac527",
+      "name": "Noa Lasman",
+      "amount": 54.0,
+      "date": "2026-11-22",
+      "anonymous": false
+    },
+    {
+      "id": "t_f6d4c20c35885cf5",
+      "name": "Eliot & Sandy Reifkind",
+      "amount": 100.0,
+      "date": "2026-11-22",
+      "anonymous": false
+    },
+    {
+      "id": "t_7edf7a2aab998565",
+      "name": "Wendy Bradshaw",
+      "amount": 18.0,
+      "date": "2026-11-22",
+      "anonymous": false
+    },
+    {
+      "id": "t_9db3ff1452356acd",
+      "name": "Stephanie Bajorek",
+      "amount": 36.0,
+      "date": "2026-11-22",
+      "anonymous": false
+    },
+    {
+      "id": "t_2934118e292b0506",
+      "name": "Elaine Schreiber",
+      "amount": 25.0,
+      "date": "2026-11-23",
+      "anonymous": false
+    }
+  ]
 }

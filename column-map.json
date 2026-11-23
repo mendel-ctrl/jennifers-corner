@@ -1,0 +1,15 @@
+{
+  "SubmissionId|Date Submitted|Imported|Charged|TotalAmount|paymentAmount|paymentPurpose|recurringPeriod|recurringNumber|contactTitle|firstName|lastName|contactAddress|contactCity|contactState|contactZip|contactPhone|contactEmail|otherComments|otherHonor|otherMemory|cardType|cardNumber|cardExpMonth|cardExpYear|nameOnCard|cardAddress|cardZip|": {
+    "amount": "paymentAmount",
+    "name": null,
+    "first_name": "firstName",
+    "last_name": "lastName",
+    "date": "Date Submitted",
+    "id": "SubmissionId",
+    "note": [
+      "otherComments",
+      "otherHonor",
+      "otherMemory"
+    ]
+  }
+}
