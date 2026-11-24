@@ -1,7 +1,7 @@
 {
   "goal": 25000,
   "donateUrl": "https://www.chabadsp.com/donate",
-  "updatedAt": "2026-11-23",
+  "updatedAt": "2026-11-24",
   "donations": [
     {
       "id": "t_249298388b45526f",
@@ -71,6 +71,48 @@
       "name": "Elaine Schreiber",
       "amount": 25.0,
       "date": "2026-11-23",
+      "anonymous": false
+    },
+    {
+      "id": "t_bcc21abcf3272334",
+      "name": "Kelly Lippman",
+      "amount": 36.0,
+      "date": "2026-11-24",
+      "anonymous": false
+    },
+    {
+      "id": "t_be3c45a5a5cec5e8",
+      "name": "Danielle Pancer",
+      "amount": 18.0,
+      "date": "2026-11-24",
+      "anonymous": false
+    },
+    {
+      "id": "t_b82ce22182788e5d",
+      "name": "David Carl Rosenfield",
+      "amount": 18.0,
+      "date": "2026-11-24",
+      "anonymous": false
+    },
+    {
+      "id": "t_aa5d303c6f26586b",
+      "name": "Jackie Levine",
+      "amount": 18.0,
+      "date": "2026-11-24",
+      "anonymous": false
+    },
+    {
+      "id": "t_1633c24ef928f967",
+      "name": "David Statman",
+      "amount": 18.0,
+      "date": "2026-11-24",
+      "anonymous": false
+    },
+    {
+      "id": "t_94390b3e4616efe5",
+      "name": "Penny H Weston",
+      "amount": 100.0,
+      "date": "2026-11-24",
       "anonymous": false
     }
   ],

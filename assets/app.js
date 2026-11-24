@@ -236,12 +236,60 @@
   wireControls();
   wireLightbox();
 
+  /* Live donations from the Google Sheet's "Public" tab (date, name, amount).
+     If the sheet can't be reached, the copy in data/donations.json is used. */
+  function parseCsv(text) {
+    var rows = [], row = [], cell = "", q = false;
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      if (q) {
+        if (c === '"' && text[i + 1] === '"') { cell += '"'; i++; }
+        else if (c === '"') q = false;
+        else cell += c;
+      } else if (c === '"') q = true;
+      else if (c === ",") { row.push(cell); cell = ""; }
+      else if (c === "\n" || c === "\r") {
+        if (c === "\r" && text[i + 1] === "\n") i++;
+        row.push(cell); rows.push(row); row = []; cell = "";
+      } else cell += c;
+    }
+    if (cell || row.length) { row.push(cell); rows.push(row); }
+    return rows;
+  }
+  function fromSheet(url) {
+    return fetch(cacheBust(url), { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function (text) {
+        var rows = parseCsv(text.trim());
+        var head = (rows.shift() || []).map(function (h) { return h.trim().toLowerCase(); });
+        var iD = head.indexOf("date"), iN = head.indexOf("name"), iA = head.indexOf("amount");
+        if (iD < 0 || iN < 0 || iA < 0) throw new Error("unexpected sheet columns");
+        return rows.map(function (r, n) {
+          var name = (r[iN] || "").trim();
+          var anon = !name || /^anonymous$/i.test(name);
+          return { id: "s" + n, name: anon ? null : name, anonymous: anon,
+                   amount: parseFloat(String(r[iA] || "").replace(/[^0-9.]/g, "")) || 0,
+                   date: (r[iD] || "").trim() };
+        });
+      });
+  }
+
   fetch(cacheBust("data/donations.json"), { cache: "no-store" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (data) {
-      state.donations = (data.donations || []).filter(function (d) { return Number(d.amount) > 0; });
-      renderTotals(data);
-      renderDonors();
+      var fallback = (data.donations || []);
+      var source = data.sheetCsvUrl
+        ? fromSheet(data.sheetCsvUrl).catch(function () { return fallback; })
+        : Promise.resolve(fallback);
+      return source.then(function (list) {
+        state.donations = list.filter(function (d) { return Number(d.amount) > 0; });
+        if (list !== fallback) {
+          var newest = state.donations.reduce(function (m, d) { return d.date > m ? d.date : m; }, "");
+          if (newest > (data.updatedAt || "")) data.updatedAt = newest;
+        }
+        renderTotals(data);
+        renderDonors();
+      });
     })
     .catch(function () {
       $("empty").textContent = "We couldn't load the donor list right now. Please refresh the page.";

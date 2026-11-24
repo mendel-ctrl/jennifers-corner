@@ -382,6 +382,9 @@ def main():
         "goal": 25000, "donateUrl": "https://www.chabadsp.com/donate", "updatedAt": "", "donations": []}
     # gifts already on the page, plus gifts you chose not to count ("excluded")
     existing = {d["id"] for d in data.get("donations", [])} | set(data.get("excluded", []))
+    # also recognise a gift already added from an email notification (same date, name and amount)
+    existing_gifts = {(d["date"], (d.get("name") or "").lower(), round(float(d["amount"]), 2))
+                      for d in data.get("donations", [])}
 
     def full_name(r):
         if found.get("name"):
@@ -412,7 +415,8 @@ def main():
             continue
         raw_id = r.get(found["id"]) if found.get("id") else None
         tid = hashed_id(raw_id) if raw_id and str(raw_id).strip() else hashed_id(f"{name}|{amount:.2f}|{when}")
-        if tid in existing:
+        same_gift = (when.isoformat(), (name or "").lower(), round(amount, 2))
+        if tid in existing or same_gift in existing_gifts:
             already += 1
             continue
         if tid in seen:
